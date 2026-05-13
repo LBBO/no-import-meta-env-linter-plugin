@@ -1,7 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>LBBO/renovate-config",
-    "github>LBBO/renovate-config:automerge-non-major"
-  ]
+  "extends": ["github>LBBO/renovate-config", "github>LBBO/renovate-config:automerge-non-major"]
 }
