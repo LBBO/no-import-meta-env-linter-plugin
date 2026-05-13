@@ -40,5 +40,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "isolatedDeclarations": true
-  }
+  },
+  "exclude": ["oxfmt.config.ts", "dist/**"]
 }

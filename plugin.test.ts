@@ -2,9 +2,7 @@ import { RuleTester as ESLintRuleTester } from 'eslint'
 import { RuleTester as OxlintRuleTester } from 'oxlint/plugins-dev'
 import { describe, it } from 'vitest'
 
-import plugin from './plugin.js'
-
-const rule = plugin.rules['no-import-meta-env']
+import { rule } from './rule.js'
 
 const valid = [
   'const x = 1',
@@ -14,7 +12,7 @@ const valid = [
   'const url = import.meta.url',
 ]
 
-const invalid: OxlintRuleTester.InvalidTestCase[] = [
+const invalid: OxlintRuleTester.InvalidTestCase[] & ESLintRuleTester.InvalidTestCase[] = [
   {
     code: 'const env = import.meta.env',
     errors: [{ message: 'Using import.meta.env is not allowed.' }],

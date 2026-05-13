@@ -207,6 +207,9 @@ importers:
 
   .:
     devDependencies:
+      '@eslint/core':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@oxlint/plugins':
         specifier: ^1.63.0
         version: 1.63.0

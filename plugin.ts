@@ -1,34 +1,9 @@
-import type { Plugin, Rule } from '@oxlint/plugins'
+import type { Plugin as ESLintPlugin } from '@eslint/core'
+import type { Plugin as OxlintPlugin } from '@oxlint/plugins'
 
-const rule: Rule = {
-  create(context) {
-    return {
-      MetaProperty(meta) {
-        // disallow `import.meta.env`
+import { rule } from './rule.js'
 
-        if (
-          meta.meta.name === 'import' &&
-          meta.property.name === 'meta' &&
-          meta.parent &&
-          meta.parent.type === 'MemberExpression' &&
-          ((!meta.parent.computed &&
-            meta.parent.property.type === 'Identifier' &&
-            meta.parent.property.name === 'env') ||
-            (meta.parent.computed &&
-              meta.parent.property.type === 'Literal' &&
-              meta.parent.property.value === 'env'))
-        ) {
-          context.report({
-            node: meta.parent,
-            message: 'Using import.meta.env is not allowed.',
-          })
-        }
-      },
-    }
-  },
-}
-
-const plugin: Plugin = {
+const plugin: ESLintPlugin & OxlintPlugin = {
   meta: {
     name: 'no-import-meta-env-linter-plugin',
   },
