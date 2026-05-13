@@ -1,8 +1,7 @@
-// `plugin.ts`
-import { defineRule, eslintCompatPlugin, type Plugin, type Rule } from '@oxlint/plugins'
+import type { Plugin, Rule } from '@oxlint/plugins'
 
-const rule: Rule = defineRule({
-  createOnce(context) {
+const rule: Rule = {
+  create(context) {
     return {
       MetaProperty(meta) {
         // disallow `import.meta.env`
@@ -20,22 +19,22 @@ const rule: Rule = defineRule({
               meta.parent.property.value === 'env'))
         ) {
           context.report({
-            node: meta,
+            node: meta.parent,
             message: 'Using import.meta.env is not allowed.',
           })
         }
       },
     }
   },
-})
+}
 
-const plugin: Plugin = eslintCompatPlugin({
+const plugin: Plugin = {
   meta: {
     name: 'no-import-meta-env-linter-plugin',
   },
   rules: {
     'no-import-meta-env': rule,
   },
-})
+}
 
 export default plugin

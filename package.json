@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/plugin.js",
   "scripts": {
     "test": "vitest run",
     "fmt": "oxfmt"
