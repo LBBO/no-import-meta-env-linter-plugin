@@ -4,13 +4,18 @@ A Oxlint / ESLint plugin that forbids the use of `import.meta.env`.
 
 ## Installation
 
+To install this package from JSR using your favorite package manager, please choose one of the following commands:
+
 ```sh
 pnpm i jsr:@lbbo/no-import-meta-env-linter-plugin
-# or
+```
+```sh
 bunx jsr add @lbbo/no-import-meta-env-linter-plugin
-# or
+```
+```sh
 npx jsr add @lbbo/no-import-meta-env-linter-plugin
-# or
+```
+```sh
 deno add jsr:@lbbo/no-import-meta-env-linter-plugin
 ```
 
@@ -30,7 +35,7 @@ export default defineConfig({
 })
 ```
 
-```json
+```jsonc
 // .oxlintrc.json
 {
   "jsPlugins": ["@lbbo/no-import-meta-env-linter-plugin"],
@@ -69,6 +74,7 @@ Disallows access to `import.meta.env`.
 ```js
 const env = import.meta.env
 if (import.meta.env.DEV) {
+  // ...
 }
 export const apiUrl = import.meta.env.VITE_API_URL
 import.meta['env']
