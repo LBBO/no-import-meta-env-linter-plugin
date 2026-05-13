@@ -12,8 +12,10 @@ const rule = defineRule({
           meta.property.name === 'meta' &&
           meta.parent &&
           meta.parent.type === 'MemberExpression' &&
-          meta.parent.property.type === 'Identifier' &&
-          meta.parent.property.name === 'env'
+          (
+            (!meta.parent.computed && meta.parent.property.type === 'Identifier' && meta.parent.property.name === 'env') ||
+            (meta.parent.computed && meta.parent.property.type === 'Literal' && meta.parent.property.value === 'env')
+          )
         ) {
           context.report({
             node: meta,
