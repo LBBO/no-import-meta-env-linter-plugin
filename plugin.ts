@@ -1,7 +1,7 @@
 // `plugin.ts`
-import { defineRule, eslintCompatPlugin } from '@oxlint/plugins'
+import { defineRule, eslintCompatPlugin, type Plugin, type Rule } from '@oxlint/plugins'
 
-const rule = defineRule({
+const rule: Rule = defineRule({
   createOnce(context) {
     return {
       MetaProperty(meta) {
@@ -12,10 +12,12 @@ const rule = defineRule({
           meta.property.name === 'meta' &&
           meta.parent &&
           meta.parent.type === 'MemberExpression' &&
-          (
-            (!meta.parent.computed && meta.parent.property.type === 'Identifier' && meta.parent.property.name === 'env') ||
-            (meta.parent.computed && meta.parent.property.type === 'Literal' && meta.parent.property.value === 'env')
-          )
+          ((!meta.parent.computed &&
+            meta.parent.property.type === 'Identifier' &&
+            meta.parent.property.name === 'env') ||
+            (meta.parent.computed &&
+              meta.parent.property.type === 'Literal' &&
+              meta.parent.property.value === 'env'))
         ) {
           context.report({
             node: meta,
@@ -27,7 +29,7 @@ const rule = defineRule({
   },
 })
 
-export default eslintCompatPlugin({
+const plugin: Plugin = eslintCompatPlugin({
   meta: {
     name: 'no-import-meta-env-linter-plugin',
   },
@@ -35,3 +37,5 @@ export default eslintCompatPlugin({
     'no-import-meta-env': rule,
   },
 })
+
+export default plugin

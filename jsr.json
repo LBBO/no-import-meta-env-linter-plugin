@@ -1,0 +1,10 @@
+{
+  "$schema": "https://jsr.io/schema/config-file.v1.json",
+  "name": "@LBBO/no-import-meta-env-linter-plugin",
+  "version": "1.0.0",
+  "exports": "./plugin.ts",
+  "license": "MIT",
+  "publish": {
+    "exclude": ["plugin.test.ts", "oxfmt.config.ts", "pnpm-workspace.yaml"]
+  }
+}

@@ -1,7 +1,8 @@
 import { RuleTester as ESLintRuleTester } from 'eslint'
 import { RuleTester as OxlintRuleTester } from 'oxlint/plugins-dev'
 import { describe, it } from 'vitest'
-import plugin from './plugin.ts'
+
+import plugin from './plugin.js'
 
 const rule = plugin.rules['no-import-meta-env']
 
@@ -12,7 +13,6 @@ const valid = [
   'const meta = import.meta',
   'const url = import.meta.url',
 ]
-
 
 const invalid: OxlintRuleTester.InvalidTestCase[] = [
   {
