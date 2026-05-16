@@ -217,25 +217,25 @@ importers:
   .:
     devDependencies:
       '@eslint/core':
-        specifier: ^1.2.1
+        specifier: 1.2.1
         version: 1.2.1
       '@oxlint/plugins':
-        specifier: ^1.63.0
+        specifier: 1.63.0
         version: 1.63.0
       eslint:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       oxfmt:
-        specifier: ^0.48.0
+        specifier: 0.48.0
         version: 0.48.0
       oxlint:
-        specifier: ^1.63.0
+        specifier: 1.63.0
         version: 1.63.0
       typescript:
-        specifier: ^6.0.3
+        specifier: 6.0.3
         version: 6.0.3
       vitest:
-        specifier: ^4.1.5
+        specifier: 4.1.5
         version: 4.1.5(vite@8.0.10)
 
 packages:
