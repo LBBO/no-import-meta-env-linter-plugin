@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@eslint/core": "1.2.1",
-    "@oxlint/plugins": "1.70.0",
+    "@oxlint/plugins": "1.71.0",
     "eslint": "10.5.0",
-    "oxfmt": "0.55.0",
-    "oxlint": "1.70.0",
+    "oxfmt": "0.56.0",
+    "oxlint": "1.71.0",
     "typescript": "6.0.3",
     "vitest": "4.1.9"
   },
