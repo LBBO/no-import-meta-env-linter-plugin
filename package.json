@@ -14,7 +14,7 @@
   "devDependencies": {
     "@eslint/core": "1.2.1",
     "@oxlint/plugins": "1.77.0",
-    "eslint": "10.8.0",
+    "eslint": "10.8.1",
     "oxfmt": "0.62.0",
     "oxlint": "1.77.0",
     "typescript": "7.0.2",
