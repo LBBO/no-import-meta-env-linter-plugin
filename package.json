@@ -13,19 +13,19 @@
   },
   "devDependencies": {
     "@eslint/core": "1.2.1",
-    "@oxlint/plugins": "1.80.0",
-    "eslint": "10.9.1",
-    "oxfmt": "0.65.0",
-    "oxlint": "1.80.0",
+    "@oxlint/plugins": "1.86.0",
+    "eslint": "10.11.0",
+    "oxfmt": "0.71.0",
+    "oxlint": "1.86.0",
     "typescript": "7.0.2",
-    "vitest": "5.0.0"
+    "vitest": "5.0.2"
   },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.0.4",
+      "version": "11.28.2",
       "onFail": "download"
     }
   },
-  "packageManager": "pnpm@12.1.0"
+  "packageManager": "pnpm@12.8.1"
 }
