@@ -18,12 +18,12 @@
     "oxfmt": "0.71.0",
     "oxlint": "1.86.0",
     "typescript": "7.0.2",
-    "vitest": "5.0.2"
+    "vitest": "5.0.3"
   },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.28.2",
+      "version": "11.28.3",
       "onFail": "download"
     }
   },
