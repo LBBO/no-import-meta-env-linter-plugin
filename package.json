@@ -14,7 +14,7 @@
   "devDependencies": {
     "@eslint/core": "1.2.1",
     "@oxlint/plugins": "1.93.0",
-    "eslint": "10.14.0",
+    "eslint": "10.15.0",
     "oxfmt": "0.78.0",
     "oxlint": "1.93.0",
     "typescript": "7.0.2",
@@ -23,9 +23,9 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.20.0",
+      "version": "12.21.0",
       "onFail": "download"
     }
   },
-  "packageManager": "pnpm@12.20.0"
+  "packageManager": "pnpm@12.21.0"
 }
